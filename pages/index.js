@@ -1,4 +1,5 @@
 import Cards from "../Components/Cards";
+import Newsletter from "../Components/Newsletter";
 import MainLayout from "../Layouts/MainLayout";
 
 const HomePage = ({ posts }) => {
@@ -7,6 +8,7 @@ const HomePage = ({ posts }) => {
       <div className="md:px-16 md:py-10 px-5 py-7">
         <h2 className="font-bold text-2xl mb-8">Featured Posts</h2>
         <Cards data={posts} />
+        {/* <Newsletter /> */}
       </div>
     </MainLayout>
   );

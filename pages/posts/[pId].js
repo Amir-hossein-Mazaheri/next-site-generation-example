@@ -1,6 +1,8 @@
 import MainLayout from "../../Layouts/MainLayout";
 import Image from "next/image";
 import Link from "next/link";
+import SendComment from "../../Components/SendComment";
+import ShowComment from "../../Components/ShowComments";
 
 const users = [
   "Amirhossein",
@@ -30,13 +32,19 @@ function EventSinglePage({ post }) {
           />
         </div>
 
-        <div className="rounded-lg mb-14 bg-white -translate-y-10 space-y-5 shadow-md shadow-blue-100/80 md:px-10 md:py-7 px-8 py-5 mx-auto w-[92%] md:w-4/5">
+        <div className="rounded-lg mb-5 bg-white -translate-y-10 space-y-5 shadow-md shadow-blue-100/80 md:px-10 md:py-7 px-8 py-5 mx-auto w-[92%] md:w-4/5">
           <div className="font-black capitalize font-serif md:text-3xl text-xl text-gray-700">
             <h2>{post.title}</h2>
           </div>
           <div className="text-gray-600 md:text-lg text-base md:leading-loose leading-relaxed">
             <p>{[1, 2, 3, 4, 5, 6, , 7, 8, 9, 10].map(() => post.body)}</p>
           </div>
+        </div>
+
+        <div className="mx-auto w-[92%] md:w-4/5 mb-14">
+          <SendComment />
+
+          <ShowComment />
         </div>
 
         <div className="fixed bottom-5 right-5 text-sm md:text-base bg-pink-500 text-white rounded-full px-10 py-3">

@@ -2,7 +2,7 @@ import Card from "./Card";
 
 function Cards({ data }) {
     return (
-      <div className="md:grid grid-cols-2 space-y-8 gap-8">
+      <div className="md:grid grid-cols-2 md:space-y-0 space-y-8 gap-8">
         {data.map((d) => (
           <Card
             key={d.id}

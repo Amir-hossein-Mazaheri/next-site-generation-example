@@ -1,4 +1,5 @@
 import Navbar from "../Components/Navbar";
+import Newsletter from "../Components/Newsletter";
 
 function MainLayout({ children }) {
   return (
@@ -12,6 +13,9 @@ function MainLayout({ children }) {
       </style>
       <Navbar />
       <main>{children}</main>
+      <section>
+        <Newsletter />
+      </section>
     </>
   );
 }

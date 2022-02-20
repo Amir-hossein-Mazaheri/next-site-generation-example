@@ -1881,6 +1881,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+sweetalert2@^11.4.2:
+  version "11.4.2"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.4.2.tgz#6cafdfd72312b7d807381cc4a4b7223fec4113ce"
+  integrity sha512-Gj3X/pNYtCp3LIKxUbcdftyeuFEZR5JZn6+I1m152GQSAMsDq2eH9tL466/CDaMvYu2L+XdR0mWwaemXpQYkQw==
+
 swr@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/swr/-/swr-1.2.1.tgz#c21a4fe2139cb1c4630450589b5b5add947a9d41"
