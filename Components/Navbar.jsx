@@ -22,7 +22,7 @@ function Navbar() {
     <div className="md:px-16 px-5 py-4 flex items-center gap-8 bg-blue-800 text-white sticky top-0 z-10">
       <div className="grow md:grow-0">
         <h1 className="font-semibold text-xl font-serif">
-          <Link href="/">Event Handler</Link>
+          <Link href="/">Programmer Blog</Link>
         </h1>
       </div>
       <nav className="hidden md:block">

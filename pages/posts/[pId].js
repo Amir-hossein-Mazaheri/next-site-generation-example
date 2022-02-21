@@ -1,8 +1,7 @@
 import MainLayout from "../../Layouts/MainLayout";
 import Image from "next/image";
 import Link from "next/link";
-import SendComment from "../../Components/SendComment";
-import ShowComment from "../../Components/ShowComments";
+import Comments from "../../Components/Comments";
 
 const users = [
   "Amirhossein",
@@ -42,9 +41,7 @@ function EventSinglePage({ post }) {
         </div>
 
         <div className="mx-auto w-[92%] md:w-4/5 mb-14">
-          <SendComment />
-
-          <ShowComment />
+          <Comments />
         </div>
 
         <div className="fixed bottom-5 right-5 text-sm md:text-base bg-pink-500 text-white rounded-full px-10 py-3">

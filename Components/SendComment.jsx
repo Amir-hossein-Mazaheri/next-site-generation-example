@@ -1,17 +1,22 @@
 import { useRouter } from "next/router";
+import { useRef } from "react";
 import CommentInput from "./CommentInput";
 
 function SendComment() {
   const route = useRouter();
 
+  const authorInput = useRef(null);
+  const emailInput = useRef(null);
+  const contentInput = useRef(null);
+
   const handleSendComment = async (event) => {
     event.preventDefault();
 
-    const author = event.target[1].value;
-    const email = event.target[0].value;
-    const content = event.target[2].value;
+    const author = authorInput.current.value;
+    const email = emailInput.current.value;
+    const content = contentInput.current.value;
 
-    const response = await fetch("/api/comments", {
+    await fetch("/api/comments", {
       method: "POST",
       body: JSON.stringify({
         author,
@@ -24,8 +29,9 @@ function SendComment() {
       },
     });
 
-    const data = await response.json();
-    console.log(data);
+    authorInput.current.value = "";
+    emailInput.current.value = "";
+    contentInput.current.value = "";
   };
 
   return (
@@ -38,6 +44,7 @@ function SendComment() {
             id="comment-email"
             placeholder="Email"
             className="grow"
+            inputRef={emailInput}
           />
           <CommentInput
             label="Enter your name"
@@ -45,6 +52,7 @@ function SendComment() {
             id="comment-author"
             placeholder="Name"
             className="grow"
+            inputRef={authorInput}
           />
         </div>
         <div>
@@ -55,6 +63,7 @@ function SendComment() {
             id="comment-content"
             placeholder="Enter..."
             className="mt-5"
+            inputRef={contentInput}
           />
         </div>
         <div>

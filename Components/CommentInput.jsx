@@ -5,6 +5,7 @@ function CommentInput({
   name,
   placeholder,
   className,
+  inputRef,
 }) {
   return (
     <div className={"flex flex-col gap-3" + " " + className}>
@@ -18,6 +19,7 @@ function CommentInput({
           placeholder={placeholder}
           name={name}
           id={id}
+          ref={inputRef}
         />
       ) : (
         <textarea
@@ -25,6 +27,7 @@ function CommentInput({
           placeholder={placeholder}
           name={name}
           id={id}
+          ref={inputRef}
         ></textarea>
       )}{" "}
     </div>
